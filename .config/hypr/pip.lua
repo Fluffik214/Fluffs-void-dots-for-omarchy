@@ -53,6 +53,22 @@ local function source_window(pip)
   return fallback
 end
 
+-- Run a dispatch without moving the mouse: Omarchy warps the cursor on
+-- workspace change and focus, so put it back where it was (again a moment
+-- later, in case the warp lands after the switch).
+local function keep_cursor(dispatcher)
+  local cursor = hl.get_cursor_pos()
+  hl.dispatch(dispatcher)
+  if not cursor then
+    return
+  end
+  local restore = hl.dsp.cursor.move({ x = math.floor(cursor.x), y = math.floor(cursor.y) })
+  hl.dispatch(restore)
+  hl.timer(function()
+    hl.dispatch(restore)
+  end, { timeout = 60, type = "oneshot" })
+end
+
 local function jump_to_source(pip)
   local source = source_window(pip)
   if not source then
@@ -62,7 +78,7 @@ local function jump_to_source(pip)
   if current and current.id == source.workspace.id then
     return
   end
-  hl.dispatch(hl.dsp.focus({ workspace = tostring(source.workspace.id) }))
+  keep_cursor(hl.dsp.focus({ workspace = tostring(source.workspace.id) }))
 end
 
 local function find_window(address)
@@ -95,7 +111,7 @@ local function settle_after_drag(address, px, py)
     local back = last_window and find_window(last_window)
     local current = hl.get_active_workspace()
     if back and back.workspace and current and back.workspace.id == current.id then
-      hl.dispatch(hl.dsp.focus({ window = "address:" .. back.address }))
+      keep_cursor(hl.dsp.focus({ window = "address:" .. back.address }))
     end
   end, { timeout = 150, type = "oneshot" })
 end

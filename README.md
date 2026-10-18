@@ -12,7 +12,7 @@ My [Omarchy](https://omarchy.org/) rice: pure black, cold greys, one ultraviolet
 
 **Hyprland** (`.config/hypr/`)
 - `looknfeel.lua` — floaty animations (windows drift in and settle), rounded corners, violet glow on focus, dimmed inactive windows, blur
-- `pip.lua` — picture-in-picture video card that follows you across desktops; click it to jump back to the video's desktop, drag it to move it
+- `pip.lua` — picture-in-picture video card that follows you across desktops; click it to jump back to the video's desktop, drag it to move it; your mouse stays where it was
 - `bindings.lua` — Windows-style Czech AltGr: `Ctrl+Alt+V` types `@`, plus `\ | € # & [ ] { } < >`
 - `hyprland.lua` — decodes video on the Intel iGPU (hybrid laptop fix for black YouTube videos in Chromium)
 - `input.lua` — Czech QWERTZ + US layouts, switch with Left Alt + Right Alt, Caps Lock as compose key
