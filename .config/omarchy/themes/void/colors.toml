@@ -1,0 +1,35 @@
+mode = "dark"
+
+# void — pure black, cold greys, one ultraviolet accent
+accent = "#8b7cf6"
+selection = "#1d1a2e"
+muted = "#4a4a56"
+
+background = "#000000"
+dark_background = "#040406"
+darker_background = "#020203"
+lighter_background = "#101014"
+
+foreground = "#c6c6d0"
+dark_foreground = "#3a3a44"
+light_foreground = "#9898a6"
+bright_foreground = "#eeeef4"
+
+red = "#c2727c"
+yellow = "#cbbb8c"
+orange = "#c69c7c"
+green = "#8eaa92"
+cyan = "#84a9ba"
+blue = "#8190d2"
+magenta = "#a28de2"
+brown = "#4a3f3a"
+
+bright_red = "#d6909a"
+bright_yellow = "#dccfa6"
+bright_green = "#a8c2ac"
+bright_cyan = "#a0c0ce"
+bright_blue = "#9eaae2"
+bright_magenta = "#bba8f0"
+
+hyprland_active_border = "rgba(8b7cf6ee) rgba(2a2440ee) 45deg"
+hyprland_inactive_border = "rgba(141418aa)"
