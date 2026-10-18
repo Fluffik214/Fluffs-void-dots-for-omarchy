@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "void pip",
-  "version": "1.1",
-  "description": "Float the page's video in a picture-in-picture card (Alt+P toggles); Skip Ad button on YouTube.",
+  "version": "1.2",
+  "description": "Float the page's video in a picture-in-picture card (Alt+P toggles); on YouTube the card's next button skips ads.",
   "permissions": [
     "scripting",
     "activeTab"
@@ -30,7 +30,7 @@
         "youtube-skipad.js"
       ],
       "world": "MAIN",
-      "run_at": "document_idle"
+      "run_at": "document_start"
     }
   ]
 }

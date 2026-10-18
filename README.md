@@ -32,7 +32,9 @@ My [Omarchy](https://omarchy.org/) rice: pure black, cold greys, one ultraviolet
 
 **Chromium**
 - `void-pip` extension: `Alt+P` floats the page's video into the picture-in-picture card
-- On YouTube the card gets a Skip Ad button while an ad plays (skips it, or jumps to the end of unskippable ones)
+- On YouTube the card's ⏭ button skips ads while one plays (or jumps to the end of unskippable ones)
+- Hardware video decoding off, so YouTube never glitches on the hybrid Intel/NVIDIA GPU
+- Reopens your last tabs on startup (set in Chromium settings: On startup → Continue where you left off)
 
 ## Keys
 
@@ -57,8 +59,8 @@ In the picker: arrows move, type to filter, `Tab`/`Enter` puts the command on th
 ## Install
 
 ```bash
-git clone https://github.com/Fluffik214/omarchy-dots.git
-cd omarchy-dots
+git clone https://github.com/Fluffik214/Fluffs-void-dots-for-omarchy.git
+cd Fluffs-void-dots-for-omarchy
 ./install.sh
 ```
 
