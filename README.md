@@ -15,7 +15,13 @@ My [Omarchy](https://omarchy.org/) rice: pure black, cold greys, one ultraviolet
 - `pip.lua` — picture-in-picture video card that follows you across desktops; click it to jump back to the video's desktop, drag it to move it
 - `bindings.lua` — Windows-style Czech AltGr: `Ctrl+Alt+V` types `@`, plus `\ | € # & [ ] { } < >`
 - `hyprland.lua` — decodes video on the Intel iGPU (hybrid laptop fix for black YouTube videos in Chromium)
-- `input.lua` — Czech QWERTZ + US layouts
+- `input.lua` — Czech QWERTZ + US layouts, switch with Left Alt + Right Alt, Caps Lock as compose key
+
+**Keyboard layout**
+- Hyprland: `cz,us` (`.config/hypr/input.lua`)
+- fcitx5: Czech keyboard as the default input method (`.config/fcitx5/`)
+- Console / TTY: `KEYMAP=cz` (`system/etc/vconsole.conf`, applied by `install.sh` via `localectl`)
+- Windows-style `Ctrl+Alt` symbols (`.config/hypr/bindings.lua`, see Keys below)
 
 **Terminal**
 - foot with extra padding, `Ctrl+V` paste, copy-on-select
@@ -26,6 +32,7 @@ My [Omarchy](https://omarchy.org/) rice: pure black, cold greys, one ultraviolet
 
 **Chromium**
 - `void-pip` extension: `Alt+P` floats the page's video into the picture-in-picture card
+- On YouTube the card gets a Skip Ad button while an ad plays (skips it, or jumps to the end of unskippable ones)
 
 ## Keys
 
@@ -34,7 +41,8 @@ My [Omarchy](https://omarchy.org/) rice: pure black, cold greys, one ultraviolet
 | `Alt+P` (in Chromium) | Float / unfloat the video |
 | `Super+Alt+P` | Play / pause media |
 | `Super+Alt+Y` | Jump to the floating video's desktop |
-| `Ctrl+Alt+V` | `@` |
+| `Ctrl+Alt+V` | `@` (also `Q` `\`, `W` `\|`, `E` `€`, `X` `#`, `C` `&`, `F` `[`, `G` `]`, `B` `{`, `N` `}`, `,` `<`, `.` `>`) |
+| `Left Alt + Right Alt` | Switch Czech / US layout |
 
 ## Picker commands
 

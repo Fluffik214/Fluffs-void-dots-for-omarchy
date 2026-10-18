@@ -1,12 +1,36 @@
 {
   "manifest_version": 3,
   "name": "void pip",
-  "version": "1.0",
-  "description": "Float the page's video in a picture-in-picture card (Alt+P toggles).",
-  "permissions": ["scripting", "activeTab"],
-  "action": { "default_title": "Float video (Alt+P)" },
-  "commands": {
-    "_execute_action": { "suggested_key": { "default": "Alt+P" } }
+  "version": "1.1",
+  "description": "Float the page's video in a picture-in-picture card (Alt+P toggles); Skip Ad button on YouTube.",
+  "permissions": [
+    "scripting",
+    "activeTab"
+  ],
+  "action": {
+    "default_title": "Float video (Alt+P)"
   },
-  "background": { "service_worker": "background.js" }
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Alt+P"
+      }
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.youtube.com/*",
+        "https://m.youtube.com/*"
+      ],
+      "js": [
+        "youtube-skipad.js"
+      ],
+      "world": "MAIN",
+      "run_at": "document_idle"
+    }
+  ]
 }
